@@ -4,6 +4,8 @@ import io.ebean.Model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Version;
 
 @Entity
@@ -15,6 +17,15 @@ public class Customer extends Model {
   String name;
 
   String notes;
+
+  @ManyToOne
+  @JoinColumn(name = "F_ITEM_A_ID")
+  private Item itemA;
+
+  @ManyToOne
+  @JoinColumn(name = "F_ITEM_B_ID")
+  private Item itemB;
+
 
   @Version
   Long version;
@@ -58,4 +69,19 @@ public class Customer extends Model {
     this.version = version;
   }
 
+  public Item getItemA() {
+    return itemA;
+  }
+
+  public void setItemA(Item itemA) {
+    this.itemA = itemA;
+  }
+
+  public Item getItemB() {
+    return itemB;
+  }
+
+  public void setItemB(Item itemB) {
+    this.itemB = itemB;
+  }
 }
