@@ -6,7 +6,9 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Version;
+import java.util.List;
 
 @Entity
 public class Customer extends Model {
@@ -26,6 +28,8 @@ public class Customer extends Model {
   @JoinColumn(name = "F_ITEM_B_ID")
   private Item itemB;
 
+  @OneToMany(mappedBy = "customer")
+  private List<Contact> contacts;
 
   @Version
   Long version;
@@ -83,5 +87,13 @@ public class Customer extends Model {
 
   public void setItemB(Item itemB) {
     this.itemB = itemB;
+  }
+
+  public List<Contact> getContacts() {
+    return contacts;
+  }
+
+  public void setContacts(List<Contact> contacts) {
+    this.contacts = contacts;
   }
 }

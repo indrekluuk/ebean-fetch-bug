@@ -27,14 +27,14 @@
     <dependency>
       <groupId>io.ebean</groupId>
       <artifactId>ebean</artifactId>
-      <version>13.6.4</version>
+      <version>13.6.5</version>
     </dependency>
 
     <!-- java annotation processor to generate query beans -->
     <dependency>
       <groupId>io.ebean</groupId>
       <artifactId>querybean-generator</artifactId>
-      <version>13.6.4</version>
+      <version>13.6.5</version>
       <scope>provided</scope>
     </dependency>
 
@@ -43,7 +43,7 @@
     <dependency>
       <groupId>io.ebean</groupId>
       <artifactId>ebean-test</artifactId>
-      <version>13.6.4</version>
+      <version>13.6.5</version>
       <scope>test</scope>
     </dependency>
 
@@ -75,7 +75,7 @@
         <configuration>
           <tiles>
             <tile>org.avaje.tile:java-compile:11</tile>
-            <tile>io.ebean.tile:enhancement:13.6.4</tile>
+            <tile>io.ebean.tile:enhancement:13.6.5</tile>
           </tiles>
         </configuration>
       </plugin>
